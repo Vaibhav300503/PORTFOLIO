@@ -16,8 +16,18 @@ Professional, high-performance cybersecurity portfolio website tailored for SOC 
 - **Certifications**: Industry-standard security certifications.
 - **Contact**: Interactive terminal-style contact info.
 
-## 🔧 Deployment
-Simply open `index.html` in any modern browser. For web hosting, upload the files to GitHub Pages, Netlify, or Vercel.
+## 🔧 Deployment & Hosting (GitHub Pages)
+
+To make this portfolio live for free:
+1. **Create a GitHub Repo**: Go to GitHub and create a new repository named `portfolio`.
+2. **Upload Files**: Upload all the files from this folder to the repository.
+3. **Enable Pages**:
+   - Navigate to **Settings** > **Pages**.
+   - Under **Build and deployment** > **Branch**, select `main` and click **Save**.
+4. **Go Live**: After a few minutes, your site will be live at `https://Vaibhav300503.github.io/portfolio/`.
+
+## 📁 Repository Description
+"🛡️ Professional Cybersecurity Portfolio for SOC Analyst & Bug Bounty Researcher. Featuring interactive projects, technical skill matrix, and a print-ready resume."
 
 ---
 © 2026 Vaibhav Deep Singh
