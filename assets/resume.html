@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Vaibhav Deep Singh</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --border: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.5;
+            background: #f3f4f6;
+            padding: 40px 20px;
+        }
+
+        .resume-page {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            min-height: 1100px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: var(--primary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .summary {
+            font-size: 14px;
+            color: var(--text-dark);
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .skill-category p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .experience-item,
+        .project-item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .item-org {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .item-date {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        ul {
+            margin-left: 20px;
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        .cert-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .cert-item {
+            font-size: 13px;
+            padding: 8px;
+            background: #f9fafb;
+            border-left: 3px solid var(--primary);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-page {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .no-print-bar {
+            max-width: 850px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e293b;
+            padding: 15px 25px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .print-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .print-btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="no-print-bar no-print">
+        <span>Resume Preview - Press "Print to PDF" to save a professional copy.</span>
+        <button class="print-btn" onclick="window.print()">
+            <span>🖨️</span> Print to PDF
+        </button>
+    </div>
+
+    <div class="resume-page">
+        <header>
+            <h1>Vaibhav Deep Singh</h1>
+            <div class="contact-info">
+                <span>📧 vaibhavdeepsingh83@gmail.com</span>
+                <span>🔗 <a
+                        href="https://www.linkedin.com/in/vaibhav-deep-singh-2047a2302">linkedin.com/in/vaibhav-deep-singh</a></span>
+                <span>💻 <a href="https://github.com/Vaibhav300503">github.com/Vaibhav300503</a></span>
+                <span>📍 Uttar Pradesh, India</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p class="summary">
+                Results-driven Cybersecurity Analyst specializing in SOC Operations, Blue Team strategies, and Security
+                Automation.
+                Hands-on experience in real-time threat detection, SIEM monitoring, and incident response.
+                Adept at developing AI-powered security solutions and automated log analysis pipelines to enhance
+                defense postures.
+                Passionate about investigating complex security alerts and contributing to proactive network defense.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Blue Team & SOC</h3>
+                    <p>SIEM (Splunk, ELK, Wazuh), MITRE ATT&CK, Threat Hunting, Incident Response, FIM, Canary Files</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Security Tools</h3>
+                    <p>Wireshark, TheHive, Zeek, YOLO (Crowd Detection), OWASP ZAP, OSINT Tools</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Automation & Dev</h3>
+                    <p>Python (Security Tooling), FastAPI, Node.js, Socket.IO, REST APIs, Redis</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases & Infrastructure</h3>
+                    <p>MongoDB, SQLite, Linux (Kali, Ubuntu/Server), Docker, Network Protocols (TCP/IP)</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">SOC Analyst Intern</span>
+                    <span class="item-date">2024 – Present</span>
+                </div>
+                <div class="item-org">CyArt Security</div>
+                <ul>
+                    <li>Real-time monitoring and analysis of security alerts across SIEM platforms, identifying and
+                        escalating potential threats.</li>
+                    <li>Developed custom Python automation scripts that improved SOC operational efficiency by 40% in
+                        log parsing and alert triage.</li>
+                    <li>Conducted initial malware triage and documented Indicators of Compromise (IOCs) for enhanced
+                        threat intelligence.</li>
+                    <li>Tuned detection rules to minimize false positives while maintaining comprehensive coverage
+                        against MITRE ATT&CK techniques.</li>
+                    <li>Collaborated on incident response playbooks for common attack vectors like brute force and SQL
+                        injection.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">SOC Platform & Agent Ecosystem</span>
+                    <span class="item-date">Python, FastAPI, Redis, MongoDB</span>
+                </div>
+                <ul>
+                    <li>Designed an enterprise-grade log collection ecosystem with native support for Windows Event Logs
+                        and Linux Syslogs.</li>
+                    <li>Implemented **File Integrity Monitoring (FIM)** with Canary File support to detect early-stage
+                        ransomware activity.</li>
+                    <li>Integrated process attribution for network connections, providing granular visibility into
+                        endpoint activity.</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Crowd Management Digital Twin</span>
+                    <span class="item-date">React, Node.js, YOLO, Socket.IO</span>
+                </div>
+                <ul>
+                    <li>Developed an AI-powered risk prediction system using YOLO models for real-time crowd density
+                        detection.</li>
+                    <li>Built a Digital Twin engine to visualize crowd dynamics and trigger proactive security alerts
+                        before critical density levels.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <div class="cert-list">
+                <div class="cert-item">IBM Cybersecurity Analyst Professional Certificate</div>
+                <div class="cert-item">Ethical Hacking Fundamentals (CEH Path)</div>
+                <div class="cert-item">TATA Cybersecurity Analyst Simulation (Forage)</div>
+                <div class="cert-item">Certified in Cybersecurity (Candidate)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">Bachelor of Technology in Computer Science (Cybersecurity)</span>
+                    <span class="item-date">Expected 2025</span>
+                </div>
+                <div class="item-org">[Your University Name Here]</div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
