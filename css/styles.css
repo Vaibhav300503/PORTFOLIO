@@ -1312,6 +1312,8 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     transition: var(--transition-normal);
+    position: relative;
+    z-index: 10;
 }
 
 .contact-link:hover {
@@ -1489,6 +1491,8 @@ section {
     justify-content: center;
     color: var(--text-secondary);
     transition: var(--transition-normal);
+    position: relative;
+    z-index: 10;
 }
 
 .footer-social a:hover {
