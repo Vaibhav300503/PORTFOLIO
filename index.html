@@ -5,24 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Vaibhav Deep Singh - Cybersecurity Analyst & SOC Blue Team Specialist. Expert in SIEM monitoring, threat detection, incident response, and security automation. View projects, skills, and experience.">
+        content="Vaibhav Deep Singh — SOC Analyst & Detection Engineer. Building resilient detections, hunting threats, and breaking things ethically. 50+ vulns disclosed, 500+ daily alerts triaged.">
     <meta name="keywords"
-        content="Cybersecurity Analyst, SOC Analyst, Blue Team, SIEM, Splunk, Threat Detection, Incident Response, Security Operations, Malware Analysis, MITRE ATT&CK, Python Security, Wireshark, Log Analysis">
+        content="SOC Analyst, Detection Engineer, Cybersecurity, SIEM, Splunk, Wazuh, MITRE ATT&CK, Bug Bounty, Threat Hunting, Incident Response">
     <meta name="author" content="Vaibhav Deep Singh">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Vaibhav Deep Singh | Cybersecurity Analyst">
+    <meta property="og:title" content="Vaibhav Deep Singh — SOC Analyst & Detection Engineer">
     <meta property="og:description"
-        content="SOC & Blue Team Specialist - Detecting, Analyzing, and Responding to Real-World Threats">
-    <meta property="og:url" content="#">
+        content="Building resilient detections, hunting threats, and breaking things ethically.">
 
-    <title>Vaibhav Deep Singh | Cybersecurity Analyst | SOC & Blue Team</title>
+    <title>Vaibhav Deep Singh — SOC Analyst & Detection Engineer</title>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 </head>
 
 <body>
@@ -34,644 +32,448 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#" class="nav-logo">VDS</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="ambient-glow"></div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <canvas class="hero-canvas" id="hero-canvas"></canvas>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="status-dot"></span>
-                <span>Available for Opportunities</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="highlight">Vaibhav Deep</span> Singh
-            </h1>
-            <p class="hero-role">// Cybersecurity Analyst | SOC & Blue Team</p>
-            <p class="hero-tagline">
-                <span class="typing-text" id="typing-text"></span>
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <span>⚡</span> View Projects
-                </a>
-                <a href="assets/resume.html" class="btn btn-secondary" target="_blank">
-                    <span>📄</span> View Resume
-                </a>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="WhatsApp Image 2026-04-20 at 12.25.35 (1).jpeg" alt="Vaibhav Deep Singh" class="sidebar-avatar">
+            <div class="sidebar-brand">
+                <span class="sidebar-brand-name">VDS</span>
+                <span class="sidebar-brand-role">SOC · Detection</span>
             </div>
         </div>
-        <div class="hero-scroll">
-            <a href="#about">
-                <span>Scroll Down</span>
-                <div class="mouse"></div>
+
+        <nav class="sidebar-nav" id="sidebar-nav">
+            <a href="#dashboard" class="sidebar-nav-item active" data-section="dashboard">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Dashboard</span>
+            </a>
+            <a href="#about" class="sidebar-nav-item" data-section="about">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>About Me</span>
+            </a>
+            <a href="#experience" class="sidebar-nav-item" data-section="experience">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <span>Experience</span>
+            </a>
+            <a href="#education" class="sidebar-nav-item" data-section="education">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 12 0v-5"/></svg>
+                <span>Education</span>
+            </a>
+            <a href="#skills" class="sidebar-nav-item" data-section="skills">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <span>Skills</span>
+            </a>
+            <a href="#projects" class="sidebar-nav-item" data-section="projects">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+                <span>Projects</span>
+            </a>
+            <a href="#achievements" class="sidebar-nav-item" data-section="achievements">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                <span>Achievements</span>
+            </a>
+            <a href="#certifications" class="sidebar-nav-item" data-section="certifications">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                <span>Certifications</span>
+            </a>
+            <a href="#contact" class="sidebar-nav-item" data-section="contact">
+                <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>Contact</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="https://github.com/Vaibhav300503" target="_blank" rel="noreferrer" class="sidebar-social-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/vaibhav-deep-singh-2047a2302" target="_blank" rel="noreferrer" class="sidebar-social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:vaibhavdeepsingh83@gmail.com" class="sidebar-social-link" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.509.23-.962.589-1.268L.862 4.364 12 13.091l11.411-8.727.263.225c.36.306.589.759.589 1.268z"/></svg>
+            </a>
+            <a href="https://tryhackme.com/p/vaibhavdeepsingh" target="_blank" rel="noreferrer" class="sidebar-social-link" aria-label="TryHackMe">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0-4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.278a.336.336 0 0 0 .336-.336V4.183a.336.336 0 0 0-.336-.336h-1.02a.336.336 0 0 0-.336.336v8.452H6.762a2.53 2.53 0 0 1-2.527-2.527 2.53 2.53 0 0 1 2.527-2.527h.638a.336.336 0 0 0 .336-.336V5.853a.336.336 0 0 0-.336-.336 3.254 3.254 0 0 1-.093-6.507h3.398a3.254 3.254 0 0 1 3.254 3.254v11.71a4.525 4.525 0 0 0 4.52 4.521 4.525 4.525 0 0 0 4.521-4.52 4.525 4.525 0 0 0-4.52-4.521h-.638a.336.336 0 0 0-.336.336v1.392c0 .186.15.336.336.336h.638a2.53 2.53 0 0 1 2.527 2.527 2.53 2.53 0 0 1-2.527 2.527 2.53 2.53 0 0 1-2.527-2.527V2.284A5.248 5.248 0 0 0 10.705 0z"/></svg>
             </a>
         </div>
-    </section>
+    </aside>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header reveal reveal-up">
-                <span class="section-tag">// whoami</span>
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- ============ DASHBOARD / HERO ============ -->
+        <section id="dashboard" class="section" style="padding-top: 40px;">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        <span class="hero-badge-text">Available for SOC / Detection roles</span>
+                    </div>
+
+                    <h1 class="hero-name">
+                        Vaibhav Deep <span class="text-gradient">Singh</span>
+                    </h1>
+
+                    <div class="hero-roles">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>SOC Analyst</span>
+                        <span class="separator">·</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        <span>Detection Engineer</span>
+                    </div>
+
+                    <p class="hero-tagline">
+                        Building resilient detections, hunting threats, and breaking things ethically across enterprise SOCs. 50+ vulnerabilities disclosed, 500+ daily alerts triaged.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn-primary">
+                            View projects
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            Get in touch
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3D Earth Globe -->
+                <div class="hero-globe" id="hero-globe">
+                    <div class="hero-globe-fade"></div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-section">
+                <div class="stats-header">
+                    <h2>Operational impact</h2>
+                    <span>Last 12 months</span>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card glass-panel" data-delay="0">
+                        <div class="stat-card-glow"></div>
+                        <div class="stat-value text-gradient"><span class="counter" data-target="50" data-suffix="+">0</span></div>
+                        <div class="stat-label">Vulnerabilities disclosed</div>
+                    </div>
+                    <div class="stat-card glass-panel" data-delay="1">
+                        <div class="stat-card-glow"></div>
+                        <div class="stat-value text-gradient"><span class="counter" data-target="500" data-suffix="+">0</span></div>
+                        <div class="stat-label">Daily alerts triaged</div>
+                    </div>
+                    <div class="stat-card glass-panel" data-delay="2">
+                        <div class="stat-card-glow"></div>
+                        <div class="stat-value text-gradient"><span class="counter" data-target="30" data-suffix="%">0</span></div>
+                        <div class="stat-label">False-positive reduction</div>
+                    </div>
+                    <div class="stat-card glass-panel" data-delay="3">
+                        <div class="stat-card-glow"></div>
+                        <div class="stat-value text-gradient"><span class="counter" data-target="10" data-suffix="% top">0</span></div>
+                        <div class="stat-label">TryHackMe global rank</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT ME ============ -->
+        <section id="about" class="section">
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">// whoami</div>
                 <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
             </div>
-
             <div class="about-grid">
-                <div class="about-image reveal reveal-left">
-                    <div class="about-image-wrapper">
-                        <div class="about-image-frame"></div>
-                        <div class="about-image-inner">
-                            <img src="assets/avatar.png" alt="Vaibhav Deep Singh" class="about-avatar-img">
-                        </div>
-                        <div class="about-stats">
-                            <div class="stat-box">
-                                <div class="value">SOC</div>
-                                <div class="label">Focus</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="value">Blue</div>
-                                <div class="label">Team</div>
-                            </div>
-                        </div>
+                <div class="about-portrait-wrap">
+                    <div class="about-portrait-panel glass-panel">
+                        <img src="WhatsApp Image 2026-04-20 at 12.26.06.jpeg" alt="Vaibhav Deep Singh portrait" class="about-portrait-img">
+                        <div class="about-portrait-overlay"></div>
                     </div>
+                    <div class="about-portrait-glow"></div>
                 </div>
-
-                <div class="about-content reveal reveal-right">
-                    <h3>// Security Operations Specialist</h3>
-                    <h2>Defending Networks, <span class="text-gradient">Hunting Threats</span></h2>
+                <div class="about-text-panel glass-panel">
                     <p class="about-text">
-                        Entry-level Cybersecurity Analyst with hands-on experience in Security Operations Center (SOC)
-                        environments.
-                        Specialized in SIEM monitoring, real-time threat detection, and incident response workflows.
-                        Proficient in analyzing security logs, correlating events, and automating repetitive security
-                        tasks
-                        to enhance operational efficiency.
+                        I'm a SOC analyst and detection engineer focused on building high-signal alerting, hunting modern adversary TTPs, and turning real intrusions into reusable detection content. I've spent the last year triaging hundreds of daily alerts at CyArt, tuning Sigma rules across Splunk and Wazuh, and disclosing 50+ vulnerabilities through independent bug bounty work.
                     </p>
-                    <p class="about-text">
-                        Passionate about building detection rules, investigating alerts, and contributing to blue team
-                        operations
-                        that protect enterprise infrastructure from emerging threats. Experienced with log analysis
-                        pipelines,
-                        malware triage procedures, and security automation using Python.
+                    <p class="about-text" style="margin-top: 12px;">
+                        Passionate about building detection rules, investigating alerts, and contributing to blue team operations that protect enterprise infrastructure from emerging threats. Experienced with log analysis pipelines, malware triage procedures, and security automation using Python.
                     </p>
-
-                    <div class="about-highlights">
-                        <div class="highlight-item reveal reveal-up stagger-1">
-                            <span class="icon">🔍</span>
-                            <span>SIEM Monitoring & Analysis</span>
+                    <div class="about-chips">
+                        <div class="info-chip">
+                            <div class="info-chip-label">Location</div>
+                            <div class="info-chip-value">India</div>
                         </div>
-                        <div class="highlight-item reveal reveal-up stagger-2">
-                            <span class="icon">🎯</span>
-                            <span>Threat Detection</span>
+                        <div class="info-chip">
+                            <div class="info-chip-label">Email</div>
+                            <div class="info-chip-value">vaibhavdeepsingh83@gmail.com</div>
                         </div>
-                        <div class="highlight-item reveal reveal-up stagger-3">
-                            <span class="icon">⚡</span>
-                            <span>Incident Response</span>
-                        </div>
-                        <div class="highlight-item reveal reveal-up stagger-4">
-                            <span class="icon">🤖</span>
-                            <span>Security Automation</span>
+                        <div class="info-chip">
+                            <div class="info-chip-label">Phone</div>
+                            <div class="info-chip-value">+91-7275962531</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-header reveal reveal-up">
-                <span class="section-tag">// ls skills/</span>
-                <h2 class="section-title">Technical <span class="text-gradient">Arsenal</span></h2>
-                <p class="section-subtitle">Security tools, frameworks, and technologies I work with</p>
-            </div>
-
-            <div class="skills-grid">
-                <!-- Offensive Security -->
-                <div class="skill-card reveal reveal-up stagger-1">
-                    <div class="skill-icon">💥</div>
-                    <h3>Bug Bounty Journey</h3>
-                    <ul class="skill-list">
-                        <li>50+ Valid Vulnerabilities Reported</li>
-                        <li>Web Exploitation (XSS, CSRF, IDOR, SSRF)</li>
-                        <li>Vulnerability Management & Disclosure</li>
-                        <li>Automated Recon & Scan Scripts</li>
-                        <li>Security Posture Assessment</li>
-                    </ul>
-                </div>
-
-                <!-- Blue Team & SOC -->
-                <div class="skill-card reveal reveal-up stagger-2">
-                    <div class="skill-icon">🛡️</div>
-                    <h3>Blue Team & SOC</h3>
-                    <ul class="skill-list">
-                        <li>SIEM (Splunk, ELK, Wazuh)</li>
-                        <li>Threat Hunting & Detection</li>
-                        <li>File Integrity Monitoring (FIM)</li>
-                        <li>Log Correlation & Analysis</li>
-                        <li>Incident Response Reports</li>
-                    </ul>
-                </div>
-
-                <!-- Tools & Tech -->
-                <div class="skill-card reveal reveal-up stagger-3">
-                    <div class="skill-icon">🔧</div>
-                    <h3>Tools & Technologies</h3>
-                    <ul class="skill-list">
-                        <li>Linux (Kali), Virtualization</li>
-                        <li>Wireshark & Zeek</li>
-                        <li>TheHive Case Management</li>
-                        <li>Redis & Socket.IO</li>
-                        <li>MongoDB & SQLite</li>
-                    </ul>
-                </div>
-
-                <!-- Automation -->
-                <div class="skill-card reveal reveal-up stagger-4">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Automation & Scripting</h3>
-                    <ul class="skill-list">
-                        <li>Python (Recon & Exploit Dev)</li>
-                        <li>FastAPI & Node.js</li>
-                        <li>Bash & PowerShell</li>
-                        <li>Log Parsing & Enrichment</li>
-                        <li>API Security Testing</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header reveal reveal-up">
-                <span class="section-tag">// cat projects.log</span>
-                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
-                <p class="section-subtitle">Real-world security projects demonstrating SOC capabilities</p>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project 1: SOC Automation Platform -->
-                <div class="project-card reveal reveal-scale stagger-1">
-                    <div class="project-header">
-                        <a href="https://github.com/Vaibhav300503/Agent" target="_blank" class="project-icon-link">
-                            <div class="project-icon">🔐</div>
-                        </a>
-                        <div class="project-links">
-                            <a href="https://github.com/Vaibhav300503/Agent" target="_blank" rel="noopener noreferrer"
-                                title="View on GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>SOC Platform & Agent Ecosystem</h3>
-                        <p>
-                            A comprehensive security monitoring solution with multi-platform log collection (Windows &
-                            Linux),
-                            File Integrity Monitoring (FIM) with Canary File support, and process attribution for
-                            network connections.
-                            Features an optimized FastAPI backend with Redis queues and OWASP Top 10 detection rules.
-                        </p>
-                        <div class="project-relevance">
-                            <span class="dot"></span>
-                            <span>FIM | Canary Files | Threat Detection</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>Redis</span>
-                            <span>TheHive</span>
-                            <span>SQLite/MongoDB</span>
-                        </div>
-                        <a href="https://github.com/Vaibhav300503/Agent" target="_blank" class="project-link-btn">
-                            View Project <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2: Crowd Management Digital Twin -->
-                <div class="project-card reveal reveal-scale stagger-2">
-                    <div class="project-header">
-                        <a href="https://github.com/Vaibhav300503/Crowd_Management_Digital_Twin" target="_blank"
-                            class="project-icon-link">
-                            <div class="project-icon">🏙️</div>
-                        </a>
-                        <div class="project-links">
-                            <a href="https://github.com/Vaibhav300503/Crowd_Management_Digital_Twin" target="_blank"
-                                rel="noopener noreferrer" title="View on GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Crowd Management Digital Twin</h3>
-                        <p>
-                            An AI-powered system for predicting and mitigating crowd risks at mega-events.
-                            Utilizes YOLO models for real-time detection and a Digital Twin engine to map density
-                            zones and trigger proactive alerts before critical thresholds are reached.
-                        </p>
-                        <div class="project-relevance">
-                            <span class="dot"></span>
-                            <span>YOLO | Risk Prediction | AI</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>Python YOLO</span>
-                            <span>Socket.IO</span>
-                        </div>
-                        <a href="https://github.com/Vaibhav300503/Crowd_Management_Digital_Twin" target="_blank"
-                            class="project-link-btn">
-                            View Project <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3: SOC Visualization Dashboard -->
-                <div class="project-card reveal reveal-scale stagger-3">
-                    <div class="project-header">
-                        <a href="https://github.com/Vaibhav300503/SOC-DASHBOARD" target="_blank"
-                            class="project-icon-link">
-                            <div class="project-icon">📊</div>
-                        </a>
-                        <div class="project-links">
-                            <a href="https://github.com/Vaibhav300503/SOC-DASHBOARD" target="_blank"
-                                rel="noopener noreferrer" title="View on GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>SOC Visualization Dashboard</h3>
-                        <p>
-                            A centralized interface for the SOC platform designed for real-time monitoring and analysis.
-                            Built with Vue.js and featuring Finance-grade glassmorphism, it provides deep visibility
-                            into log streams, alert frequencies, and endpoint health statuses.
-                        </p>
-                        <div class="project-relevance">
-                            <span class="dot"></span>
-                            <span>SIEM UI | Data Visualization</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Vue.js</span>
-                            <span>Chart.js</span>
-                            <span>Tailwind CSS</span>
-                            <span>Vite</span>
-                        </div>
-                        <a href="https://github.com/Vaibhav300503/SOC-DASHBOARD" target="_blank"
-                            class="project-link-btn">
-                            View Project <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4: Custom Network Scanner -->
-                <div class="project-card reveal reveal-scale stagger-4">
-                    <div class="project-header">
-                        <a href="https://github.com/Vaibhav300503/Custom_Network_Scanner" target="_blank"
-                            class="project-icon-link">
-                            <div class="project-icon">📡</div>
-                        </a>
-                        <div class="project-links">
-                            <a href="https://github.com/Vaibhav300503/Custom_Network_Scanner" target="_blank"
-                                rel="noopener noreferrer" title="View on GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Custom Network Scanner</h3>
-                        <p>
-                            A Python-based offensive security tool for network reconnaissance and vulnerability
-                            assessment. Features ARP host discovery, stealth TCP SYN scanning, service identification,
-                            and OS fingerprinting to map attack surfaces.
-                        </p>
-                        <div class="project-relevance">
-                            <span class="dot"></span>
-                            <span>Recon | Stealth Scanning | Offensive Security</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Scapy</span>
-                            <span>Threading</span>
-                            <span>Socket</span>
-                        </div>
-                        <a href="https://github.com/Vaibhav300503/Custom_Network_Scanner" target="_blank"
-                            class="project-link-btn">
-                            View Project <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 5: HoneyLearn Defensive Honeypot -->
-                <div class="project-card reveal reveal-scale stagger-5">
-                    <div class="project-header">
-                        <a href="https://github.com/Vaibhav300503/HoneyLearn" target="_blank"
-                            class="project-icon-link">
-                            <div class="project-icon">🍯</div>
-                        </a>
-                        <div class="project-links">
-                            <a href="https://github.com/Vaibhav300503/HoneyLearn" target="_blank"
-                                rel="noopener noreferrer" title="View on GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>HoneyLearn Defensive Honeypot</h3>
-                        <p>
-                            A complete Python FastAPI application acting as a honeypot, tracking suspicious behaviors and utilizing an AI module (Scikit-Learn Isolation Forest) to dynamically score and defend against malicious traffic.
-                        </p>
-                        <div class="project-relevance">
-                            <span class="dot"></span>
-                            <span>Honeypot | AI Scoring | Threat Hunting</span>
-                        </div>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>Scikit-Learn</span>
-                            <span>SQLite</span>
-                        </div>
-                        <a href="https://github.com/Vaibhav300503/HoneyLearn" target="_blank"
-                            class="project-link-btn">
-                            View Project <span>→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <div class="section-header reveal reveal-up">
-                <span class="section-tag">// git log --oneline</span>
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience" class="section">
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">// timeline</div>
                 <h2 class="section-title">Work <span class="text-gradient">Experience</span></h2>
             </div>
 
             <div class="timeline">
-                <div class="timeline-item reveal reveal-left">
+                <!-- SOC Analyst Intern -->
+                <div class="timeline-item" data-animate data-delay="0">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-date">May 2025 - Dec 2025</span>
-                    <div class="timeline-content">
-                        <h3>Bug Bounty Researcher</h3>
-                        <h4>Independent</h4>
-                        <ul>
-                            <li>Reported 50+ valid vulnerabilities (XSS, SSRF, SSTI, IDOR, bypasses) across multiple
-                                platforms</li>
-                            <li>Collaborated with vendor security teams for responsible disclosure and verified
-                                remediation</li>
-                            <li>Built custom reconnaissance and exploitation scripts to automate repetitive testing
-                                tasks</li>
-                            <li>Developed deep understanding of secure coding and real-world web application defense
-                            </li>
+                    <div class="timeline-card glass-panel">
+                        <div class="timeline-card-header">
+                            <div>
+                                <div class="timeline-role">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                    <h3>SOC Analyst Intern</h3>
+                                </div>
+                                <p class="timeline-company">CyArt Security</p>
+                            </div>
+                            <span class="timeline-period">Aug 2025 — Feb 2026</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Triaged 400–500 daily SIEM alerts across Splunk and Wazuh, reducing false positives by ~30% via tuned Sigma rules.</li>
+                            <li>Authored detection content mapped to MITRE ATT&CK techniques (T1110, T1566, T1059) and led IR playbook iteration.</li>
+                            <li>Performed threat hunting on endpoint telemetry (Sysmon, EDR) to surface lateral movement and persistence TTPs.</li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal reveal-left">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">Aug 2025 - Feb 2026</span>
-                    <div class="timeline-content">
-                        <h3>SOC Analyst Intern</h3>
-                        <h4>CyArt Security</h4>
-                        <ul>
-                            <li>Monitored and investigated 500+ daily security alerts using Wazuh and Splunk Enterprise; tuned detection rules to reduce false positive rate by 30% and improve overall alert fidelity.</li>
-                            <li>Developed SOC automation playbooks in Python and Bash, improving alert triage efficiency by 40% and reducing Mean Time to Respond (MTTR) for Tier 1 incidents by 25%.</li>
-                            <li>Conducted log correlation, malware triage, and root cause analysis on Windows and Linux endpoints, mapping findings to MITRE ATT&CK tactics and documenting detailed incident response reports.</li>
-                        </ul>
-                        <div class="experience-credentials" style="margin-top: 1.5rem; display: flex; gap: 10px; flex-wrap: wrap;">
-                            <a href="https://drive.google.com/file/d/1Ju5kK8asAPZBCAtCh-dfvDiqroBl7gwE/view?usp=sharing" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
-                                <span>📄</span> Offer Letter
-                            </a>
-                            <a href="https://drive.google.com/file/d/1Zs8vwtH_0YvkDbXPYDyaziEHXDaffjoI/view?usp=sharing" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
-                                <span>🏆</span> Completion Certificate
-                            </a>
+                        <div class="timeline-credentials">
+                            <a href="https://drive.google.com/file/d/1Ju5kK8asAPZBCAtCh-dfvDiqroBl7gwE/view?usp=sharing" target="_blank" class="credential-btn credential-btn-outline">📄 Offer Letter</a>
+                            <a href="https://drive.google.com/file/d/1Zs8vwtH_0YvkDbXPYDyaziEHXDaffjoI/view?usp=sharing" target="_blank" class="credential-btn credential-btn-filled">🏆 Completion Certificate</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Education Section -->
-    <section class="education" id="education">
-        <div class="container">
-            <div class="section-header reveal reveal-up">
-                <span class="section-tag">// cat academics.log</span>
+                <!-- Bug Bounty Researcher -->
+                <div class="timeline-item" data-animate data-delay="1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-panel">
+                        <div class="timeline-card-header">
+                            <div>
+                                <div class="timeline-role">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                    <h3>Independent Security Researcher</h3>
+                                </div>
+                                <p class="timeline-company">Bug Bounty Programs</p>
+                            </div>
+                            <span class="timeline-period">Jan 2025 — Aug 2025</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Disclosed 50+ vulnerabilities across web targets — IDOR, SSRF, XSS, broken access control, business-logic flaws.</li>
+                            <li>Acknowledged on responsible-disclosure programs; built custom recon and fuzzing tooling in Python.</li>
+                            <li>Translated offensive findings into Wazuh rules and Splunk searches to improve SOC detection coverage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MITRE ATT&CK Grid -->
+            <div class="mitre-section">
+                <div class="mitre-header">
+                    <div>
+                        <h2>MITRE ATT&CK <span class="text-gradient">coverage</span></h2>
+                        <p style="font-size: 0.875rem; color: var(--muted); margin-top: 4px;">Techniques I've built detections for, hunted, or researched.</p>
+                    </div>
+                    <span class="mitre-version">v15 · Enterprise</span>
+                </div>
+
+                <div class="mitre-grid" id="mitre-grid">
+                    <!-- Populated by JS -->
+                </div>
+
+                <div class="mitre-detail glass-panel" id="mitre-detail"></div>
+
+                <div class="mitre-legend">
+                    <div class="mitre-legend-item">
+                        <span class="mitre-legend-dot active"></span>
+                        Hands-on detection / hunt experience
+                    </div>
+                    <div class="mitre-legend-item">
+                        <span class="mitre-legend-dot inactive"></span>
+                        Working knowledge
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EDUCATION ============ -->
+        <section id="education" class="section">
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">// academics</div>
                 <h2 class="section-title">Educational <span class="text-gradient">Background</span></h2>
             </div>
-            <div class="education-grid reveal reveal-up">
-                <div class="cert-card" style="border-left: 4px solid var(--accent-blue);">
-                    <div class="cert-icon">🎓</div>
-                    <div class="cert-content">
-                        <h3>B.Sc. in Computer Science</h3>
-                        <p>Sage University, Indore • CGPA: 8.0</p>
-                        <span class="cert-badge">Completed May 2025</span>
+            <div class="education-grid">
+                <div class="education-card glass-panel" data-animate data-delay="0">
+                    <div class="education-card-icon">🎓</div>
+                    <h3>B.Sc. in Computer Science</h3>
+                    <p>Sage University, Indore • CGPA: 8.0/10.0</p>
+                    <span class="badge">Graduated May 2025</span>
+                </div>
+                <div class="education-card glass-panel" data-animate data-delay="1">
+                    <div class="education-card-icon">🔐</div>
+                    <h3>Ethical Hacking Training</h3>
+                    <p>Internshala — In-depth offensive security training</p>
+                    <span class="badge">Completed</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section id="skills" class="section">
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">// stack</div>
+                <h2 class="section-title">Skills & <span class="text-gradient">Tools</span></h2>
+            </div>
+            <div class="skills-grid" id="skills-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section id="projects" class="section">
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">// builds</div>
+                <h2 class="section-title">Selected <span class="text-gradient">Projects</span></h2>
+                <p class="section-subtitle">Detection engineering, deception tech, and offensive tooling.</p>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- ============ ACHIEVEMENTS ============ -->
+        <section id="achievements" class="section">
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">// recognition</div>
+                <h2 class="section-title">Achievements & <span class="text-gradient">Wins</span></h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievements-list" id="achievements-list">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="achievement-photo-panel glass-panel" data-animate>
+                    <img src="WhatsApp Image 2026-04-20 at 12.26.07.jpeg" alt="Vaibhav Deep Singh" class="achievement-photo">
+                    <div class="achievement-photo-overlay"></div>
+                    <div class="achievement-photo-caption">
+                        <div class="eyebrow">// operator</div>
+                        <div class="name">Vaibhav Deep Singh</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section class="certifications" id="certifications">
-        <div class="container">
-            <div class="section-header reveal reveal-up">
-                <span class="section-tag">// cat certs.txt</span>
-                <h2 class="section-title">Professional <span class="text-gradient">Certifications</span></h2>
+        <!-- ============ CERTIFICATIONS ============ -->
+        <section id="certifications" class="section">
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">// credentials</div>
+                <h2 class="section-title"><span class="text-gradient">Certifications</span></h2>
             </div>
-
-            <div class="certs-grid">
-                <div class="cert-card reveal reveal-up stagger-1">
-                    <div class="cert-icon">🏆</div>
-                    <div class="cert-content">
-                        <h3>IBM Cybersecurity Analyst</h3>
-                        <p>Coursera Professional Certificate</p>
-                        <span class="cert-badge">Verified</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal reveal-up stagger-2">
-                    <div class="cert-icon">🎓</div>
-                    <div class="cert-content">
-                        <h3>Ethical Hacking Training</h3>
-                        <p>In-depth offensive security training</p>
-                        <span class="cert-badge">Completed</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal reveal-up stagger-3">
-                    <div class="cert-icon">📜</div>
-                    <div class="cert-content">
-                        <h3>TATA Cybersecurity Simulation</h3>
-                        <p>Forage Virtual Experience</p>
-                        <span class="cert-badge">Completed</span>
-                    </div>
-                </div>
+            <div class="certs-grid" id="certs-grid">
+                <!-- Populated by JS -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header reveal reveal-up">
-                <span class="section-tag">// sudo connect</span>
-                <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="section" style="padding-bottom: 80px;">
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">// reach out</div>
+                <h2 class="section-title">Let's <span class="text-gradient">work together</span></h2>
             </div>
-
-            <div class="contact-grid">
-                <div class="contact-info reveal reveal-left">
-                    <h3>Let's Work Together</h3>
-                    <p>
-                        Looking for a dedicated security analyst to join your SOC team?
-                        I'm passionate about threat detection, incident response, and building
-                        security tools that make a real difference. Let's connect and discuss
-                        how I can contribute to your security operations.
-                    </p>
-
-                    <div class="contact-links">
-                        <a href="mailto:vaibhavdeepsingh83@gmail.com" class="contact-link">
-                            <div class="icon">📧</div>
-                            <div class="details">
-                                <h4>Email</h4>
-                                <span>vaibhavdeepsingh83@gmail.com</span>
-                            </div>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/vaibhav-deep-singh-2047a2302" target="_blank"
-                            rel="noopener noreferrer" class="contact-link">
-                            <div class="icon">💼</div>
-                            <div class="details">
-                                <h4>LinkedIn</h4>
-                                <span>linkedin.com/in/vaibhav-deep-singh-2047a2302</span>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/Vaibhav300503" target="_blank" rel="noopener noreferrer"
-                            class="contact-link">
-                            <div class="icon">💻</div>
-                            <div class="details">
-                                <h4>GitHub</h4>
-                                <span>github.com/Vaibhav300503</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-visual reveal reveal-right">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span>bash ~ contact.sh</span>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="prompt">$</span>
-                                <span class="command">whoami</span>
-                                <span class="output">vaibhav_deep_singh</span>
-                            </div>
-                            <div class="terminal-line">
-                                <span class="prompt">$</span>
-                                <span class="command">cat role.txt</span>
-                                <span class="output">Cybersecurity Analyst | SOC Blue Team</span>
-                            </div>
-                            <div class="terminal-line">
-                                <span class="prompt">$</span>
-                                <span class="command">echo $STATUS</span>
-                                <span class="output">Available for opportunities ✓</span>
-                            </div>
-                            <div class="terminal-line">
-                                <span class="prompt">$</span>
-                                <span class="command">./send_message.sh</span>
-                                <span class="output">Ready to connect! 🚀</span>
-                            </div>
-                            <div class="terminal-line">
-                                <span class="prompt">$</span>
-                                <span class="command typing-cursor">_</span>
-                            </div>
+            <div class="contact-panel glass-panel">
+                <div class="contact-glow"></div>
+                <div class="contact-inner">
+                    <div>
+                        <p class="contact-text">
+                            Open to SOC analyst, detection engineering, and threat-hunting roles.
+                            Also happy to chat about CTFs, bug bounty disclosures, or detection content.
+                            Immediate joiner and open to relocation.
+                        </p>
+                        <div class="contact-cta">
+                            <a href="mailto:vaibhavdeepsingh83@gmail.com" class="btn-primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                Send an email
+                            </a>
+                            <a href="assets/resume.html" target="_blank" class="btn-secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                                View resume
+                            </a>
                         </div>
                     </div>
+                    <ul class="contact-links-list">
+                        <li>
+                            <a href="mailto:vaibhavdeepsingh83@gmail.com" class="contact-link-item">
+                                <div class="contact-link-left">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                    <span>vaibhavdeepsingh83@gmail.com</span>
+                                </div>
+                                <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+917275962531" class="contact-link-item">
+                                <div class="contact-link-left">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    <span>+91-7275962531</span>
+                                </div>
+                                <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Vaibhav300503" target="_blank" rel="noreferrer" class="contact-link-item">
+                                <div class="contact-link-left">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    <span>github.com/Vaibhav300503</span>
+                                </div>
+                                <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/vaibhav-deep-singh-2047a2302" target="_blank" rel="noreferrer" class="contact-link-item">
+                                <div class="contact-link-left">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                    <span>linkedin.com/in/vaibhav-deep-singh</span>
+                                </div>
+                                <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="contact-link-item" style="cursor: default;">
+                                <div class="contact-link-left">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <span>India · Open to Relocation</span>
+                                </div>
+                                <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">&gt; VDS_</div>
-                <p class="footer-text">
-                    Designed & Built with <span>❤</span> by Vaibhav Deep Singh
-                </p>
-                <div class="footer-social">
-                    <a href="https://github.com/Vaibhav300503" target="_blank" rel="noopener noreferrer" title="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vaibhav-deep-singh-2047a2302" target="_blank"
-                        rel="noopener noreferrer" title="LinkedIn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                    </a>
-                    <a href="mailto:vaibhavdeepsingh83@gmail.com" title="Email">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.509.23-.962.589-1.268L.862 4.364 12 13.091l11.411-8.727.263.225c.36.306.589.759.589 1.268z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="js/main.js"></script>
 </body>
 
