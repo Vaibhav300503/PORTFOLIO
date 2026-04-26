@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     renderSkills();
     renderProjects();
     renderAchievements();
+    renderTryHackMePanel();
     renderCertifications();
     renderMitreGrid();
     
@@ -95,18 +96,22 @@ const projects = [
 ];
 
 const achievements = [
-    { title: 'SunHacks 2025 — Winner', description: 'Hackathon Winner at Sandeep University, Pune.' },
-    { title: '50+ Bug Bounty Findings', description: 'Validated vulnerabilities responsibly disclosed across the industry.' },
-    { title: 'TryHackMe — Top 10%', description: 'Completed 50+ hands-on rooms covering SOC, pentesting, and threat detection.' },
-    { title: 'HackChrono 2025 — Selected', description: 'Selected competitor at Chandigarh University hackathon.' },
-    { title: 'Hackatron 2025 — Selected', description: 'Selected at ABV-IIITM, Gwalior.' },
-    { title: 'Xcelerate 3.0 — Selected', description: 'Selected at Shiv Nadar University, Greater Noida.' },
+    { title: 'SunHacks 2025 — Award Recipient', description: 'Recognized for building an AI-powered Crowd Management Digital Twin at the international-level SunHacks hackathon, Sandip University, Nashik.', certLink: 'https://drive.google.com/file/d/1qZLbmIr-TRpgHJzB4McWaH_9CXR-mc2q/view?usp=sharing' },
+    { title: 'Spardha 25 by VAMNICOM, Pune — Winner', description: 'Award winner at Spardha 25, organized by Vaikunth Mehta National Institute of Cooperative Management (VAMNICOM), Pune.', certLink: 'https://drive.google.com/file/d/1umstccYdPQ7kPsj1UsFsg9xM_2-X3fXs/view?usp=sharing' },
+    { title: '50+ Bug Bounty Findings', description: 'Validated vulnerabilities responsibly disclosed across the industry — including XSS, SSRF, IDOR, and broken access control.' },
+    { title: 'TryHackMe — Top 7%', description: 'Level 8 [HACKER] · 56 rooms completed · 12 badges · 7,266+ points. Top 7% globally.' },
+    { title: 'HackChrono 2025 — Selected', description: 'Selected competitor at Chandigarh University hackathon.', certLink: 'https://drive.google.com/file/d/17VlmtSl2n_yh7OzjUfNFaQxVsF7oRGFC/view?usp=sharing' },
+    { title: 'Hackatron 2025 — Selected', description: 'Selected at ABV-IIITM, Gwalior national-level hackathon.', certLink: 'https://drive.google.com/file/d/12xJnm8LiRf4AGonemKOxoQeiydpC2Aro/view?usp=sharing' },
+    { title: 'Xcelerate 3.0 — Selected', description: 'Selected at Shiv Nadar University, Greater Noida hackathon.', certLink: 'https://drive.google.com/file/d/1QzXDi81EtvuWzvvvxznuD9-0ZhPF0UYL/view?usp=sharing' },
 ];
 
 const certifications = [
-    { name: 'IBM Cybersecurity Analyst', issuer: 'IBM / Coursera' },
-    { name: 'Cybersecurity Job Simulation', issuer: 'Tata / Forage' },
-    { name: 'Ethical Hacking', issuer: 'Internshala' },
+    { name: 'IBM Cybersecurity Professional Analyst', issuer: 'IBM / Coursera' },
+    { name: 'Cybersecurity with AI', issuer: 'Internshala Training Program', pdf: 'certificate/Cyber Security with AI Training - Certificate of Completion.pdf', driveLink: 'https://drive.google.com/file/d/1xDHBA6OjEDv9I2cjWOOfp9BBjwHR7amP/view?usp=sharing' },
+    { name: 'Certified Ethical Hacker', issuer: 'NSDC', pdf: 'certificate/ethical_hacker_NSDC.pdf', driveLink: 'https://drive.google.com/file/d/1eS8kFzD5-jCKF4Vz_HbNUMO7AmohWAZo/view?usp=sharing' },
+    { name: 'Mastering Network Security: Defend Against Cyber Attacks', issuer: 'Udemy', pdf: 'certificate/udemy_mastering_network_security.pdf', driveLink: 'https://drive.google.com/file/d/1mQjF__C3nqQiozFLW5jRQPJ7xCtSxToV/view?usp=sharing' },
+    { name: 'Defensive Cyber Operations: The Blue Team & Network Security', issuer: 'Udemy', pdf: 'certificate/udemy_network_blue_team_security.pdf', driveLink: 'https://drive.google.com/file/d/1JHSNEsYhk_F9mFMVOLDfT8RZgzmLGe5s/view?usp=sharing' },
+    { name: 'Red Team Mastery: Advanced Offensive Security', issuer: 'Udemy', pdf: 'certificate/udemy_red_team_mastery.pdf', driveLink: 'https://drive.google.com/file/d/1l84P475gEXRWOWCB1jXW1xeW7bL5KQDu/view?usp=sharing' },
 ];
 
 const mitreTechniques = [
@@ -369,6 +374,14 @@ function renderAchievements() {
         card.className = 'achievement-card glass-panel glass-panel-hover';
         card.setAttribute('data-animate', '');
         card.dataset.delay = i;
+
+        const certBtnHtml = a.certLink
+            ? `<a href="${a.certLink}" target="_blank" rel="noreferrer" class="achievement-cert-link" onclick="event.stopPropagation()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                View Certificate
+              </a>`
+            : '';
+
         card.innerHTML = `
             <div class="achievement-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
@@ -376,6 +389,7 @@ function renderAchievements() {
             <div>
                 <h3>${a.title}</h3>
                 <p>${a.description}</p>
+                ${certBtnHtml}
             </div>
         `;
         list.appendChild(card);
@@ -392,16 +406,102 @@ function renderCertifications() {
         card.className = 'cert-card glass-panel glass-panel-hover';
         card.setAttribute('data-animate', '');
         card.dataset.delay = i;
+
+        const linkTarget = c.driveLink || c.pdf;
+        if (linkTarget) {
+            card.classList.add('cert-card-clickable');
+            card.addEventListener('click', () => window.open(linkTarget, '_blank'));
+            card.style.cursor = 'pointer';
+        }
+
         card.innerHTML = `
             <div class="cert-card-glow"></div>
             <div class="cert-card-inner">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                 <div class="issuer">${c.issuer}</div>
                 <h3>${c.name}</h3>
+                ${linkTarget ? '<div class="cert-view-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg> View Certificate</div>' : ''}
             </div>
         `;
         grid.appendChild(card);
     });
+}
+
+/* ============ RENDER TRYHACKME PANEL ============ */
+function renderTryHackMePanel() {
+    const panel = document.getElementById('thm-stats-panel');
+    if (!panel) return;
+
+    const thmData = {
+        username: 'vaibhavdeepsingh',
+        rank: 'HACKER',
+        level: 8,
+        percentile: 'Top 7%',
+        points: '7,266',
+        rooms: 56,
+        badges: 12,
+        streak: 13,
+        profileUrl: 'https://tryhackme.com/p/vaibhavdeepsingh',
+        badgesList: [
+            'cat linux.txt', 'First Four', 'Blue', 'OhSINT',
+            'Networking Nerd', 'World Wide Web', 'Webbed',
+            'Pentesting Principles', 'Burped', 'Hash Cracker',
+            '7 Day Streak', 'Bronze League Winner'
+        ]
+    };
+
+    panel.innerHTML = `
+        <div class="thm-panel-inner">
+            <div class="thm-panel-heading">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>TryHackMe Lab Profile Stats</span>
+            </div>
+            <a href="${thmData.profileUrl}" target="_blank" rel="noreferrer" class="thm-badge-link">
+                <img src="tryhackme.JPG" alt="TryHackMe Badge — ${thmData.username}" class="thm-badge-img">
+                <div class="thm-badge-overlay">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                    <span>View Profile</span>
+                </div>
+            </a>
+            <div class="thm-info">
+                <div class="thm-header-row">
+                    <div>
+                        <div class="thm-username">${thmData.username}</div>
+                        <div class="thm-rank-badge">[${thmData.rank}] · Level ${thmData.level} [0x${thmData.level}]</div>
+                    </div>
+                    <div class="thm-percentile">${thmData.percentile}</div>
+                </div>
+                <div class="thm-stats-tiles">
+                    <div class="thm-stat-tile">
+                        <div class="thm-stat-value">${thmData.level}</div>
+                        <div class="thm-stat-label">Level</div>
+                    </div>
+                    <div class="thm-stat-tile">
+                        <div class="thm-stat-value">${thmData.rooms}</div>
+                        <div class="thm-stat-label">Rooms</div>
+                    </div>
+                    <div class="thm-stat-tile">
+                        <div class="thm-stat-value">${thmData.badges}</div>
+                        <div class="thm-stat-label">Badges</div>
+                    </div>
+                    <div class="thm-stat-tile">
+                        <div class="thm-stat-value">${thmData.streak}</div>
+                        <div class="thm-stat-label">Day Streak</div>
+                    </div>
+                    <div class="thm-stat-tile">
+                        <div class="thm-stat-value">${thmData.points}</div>
+                        <div class="thm-stat-label">Points</div>
+                    </div>
+                </div>
+                <div class="thm-badges-section">
+                    <div class="thm-badges-title">Badges Earned</div>
+                    <div class="thm-badges-list">
+                        ${thmData.badgesList.map(b => `<span class="thm-badge-tag">${b}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
 }
 
 /* ============ RENDER MITRE GRID ============ */

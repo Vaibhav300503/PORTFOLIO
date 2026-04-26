@@ -153,6 +153,31 @@
             border-left: 3px solid var(--primary);
         }
 
+        .cert-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 11px;
+        }
+
+        .achievement-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .achievement-item {
+            font-size: 13px;
+            padding: 8px;
+            background: #f9fafb;
+            border-left: 3px solid #10b981;
+        }
+
+        .achievement-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 11px;
+        }
+
         @media print {
             body {
                 background: white;
@@ -203,7 +228,7 @@
 
 <body>
     <div class="no-print-bar no-print">
-        <span>Resume Preview - Press "Print to PDF" to save a professional copy.</span>
+        <span>Resume Preview — Press "Print to PDF" to save a professional copy.</span>
         <button class="print-btn" onclick="window.print()">
             <span>🖨️</span> Print to PDF
         </button>
@@ -214,45 +239,44 @@
             <h1>Vaibhav Deep Singh</h1>
             <div class="contact-info">
                 <span>📧 vaibhavdeepsingh83@gmail.com</span>
+                <span>📞 +91-7275962531</span>
                 <span>🔗 <a
                         href="https://www.linkedin.com/in/vaibhav-deep-singh-2047a2302">linkedin.com/in/vaibhav-deep-singh</a></span>
                 <span>💻 <a href="https://github.com/Vaibhav300503">github.com/Vaibhav300503</a></span>
-                <span>📍 Uttar Pradesh, India</span>
+                <span>🎯 <a href="https://tryhackme.com/p/vaibhavdeepsingh">tryhackme.com/p/vaibhavdeepsingh</a></span>
+                <span>📍 India · Open to Relocation</span>
             </div>
         </header>
 
         <section>
-            <h2>Summary</h2>
+            <h2>Professional Summary</h2>
             <p class="summary">
                 Results-driven Cybersecurity Analyst specializing in SOC Operations, Blue Team strategies, and Security
-                Automation.
-                Hands-on experience in real-time threat detection, SIEM monitoring, and incident response.
-                Adept at developing AI-powered security solutions and automated log analysis pipelines to enhance
-                defense postures.
-                Passionate about investigating complex security alerts and contributing to proactive network defense.
+                Automation. Hands-on experience in real-time threat detection, SIEM monitoring (Splunk, Wazuh, ELK),
+                and incident response with MITRE ATT&CK mapping. Triaged 500+ daily alerts, reduced false positives
+                by 30%, and responsibly disclosed 50+ vulnerabilities. Adept at building detection rules, hunting
+                adversary TTPs, and developing AI-powered security solutions. Immediate joiner, open to relocation.
             </p>
         </section>
 
         <section>
-            <h2>Technical Arsenal</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Blue Team & SOC</h3>
-                    <p>SIEM (Splunk, ELK, Wazuh), Threat Hunting, Incident Response, FIM, Log Analysis, Malware Triage
-                    </p>
+                    <p>SIEM (Splunk, ELK, Wazuh), Sigma Rules, KQL, SPL, Threat Hunting, Incident Response, FIM, Log Analysis, Malware Triage, SOC Playbooks</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Bug Bounty Journey</h3>
-                    <p>Reported 50+ valid vulnerabilities (XSS, CSRF, IDOR, SSRF), Recon Automation, Disclosure Workflow
-                    </p>
+                    <h3>Offensive Security</h3>
+                    <p>Burp Suite, OWASP ZAP, Nuclei, Metasploit, Nmap, Bug Bounty (50+ findings — XSS, SSRF, IDOR, SSTI)</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Automation & Dev</h3>
-                    <p>Python (Recon & Exploit Dev), FastAPI, Node.js, Socket.IO, Bash, PowerShell, API Testing</p>
+                    <h3>Endpoint & Network</h3>
+                    <p>EDR, Sysmon, Wireshark, Zeek, Suricata, TCP/IP, Scapy</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Systems & Net</h3>
-                    <p>Linux (Kali, Ubuntu), Virtualization, Wireshark, Zeek, TCP/IP, MongoDB, SQLite</p>
+                    <h3>Languages & Tools</h3>
+                    <p>Python, Bash, PowerShell, FastAPI, Node.js, Socket.IO, Docker, Git, Linux (Kali, Ubuntu), MongoDB, Redis</p>
                 </div>
             </div>
         </section>
@@ -261,36 +285,33 @@
             <h2>Work Experience</h2>
             <div class="experience-item">
                 <div class="item-header">
-                    <span class="item-title">Bug Bounty Researcher</span>
-                    <span class="item-date">May 2025 – Dec 2025</span>
-                </div>
-                <div class="item-org">Independent</div>
-                <ul>
-                    <li>Reported 50+ valid vulnerabilities (XSS, SSRF, SSTI, IDOR, bypasses) across multiple platforms.
-                    </li>
-                    <li>Collaborated with vendor security teams for responsible disclosure and verified remediation
-                        steps.</li>
-                    <li>Built custom reconnaissance and exploitation scripts in Python to automate repetitive testing
-                        tasks.</li>
-                    <li>Developed a deep understanding of secure coding practices and real-world web application
-                        defense.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <div class="item-header">
                     <span class="item-title">SOC Analyst Intern</span>
                     <span class="item-date">Aug 2025 – Feb 2026</span>
                 </div>
                 <div class="item-org">CyArt Security</div>
                 <ul>
-                    <li>Monitored and investigated 500+ daily security alerts using Wazuh and Splunk Enterprise; tuned detection rules to reduce false positive rate by 30% and improve overall alert fidelity.</li>
+                    <li>Monitored and investigated 400–500 daily security alerts using Wazuh and Splunk Enterprise; tuned Sigma detection rules to reduce false positive rate by ~30% and improve overall alert fidelity.</li>
                     <li>Developed SOC automation playbooks in Python and Bash, improving alert triage efficiency by 40% and reducing Mean Time to Respond (MTTR) for Tier 1 incidents by 25%.</li>
-                    <li>Conducted log correlation, malware triage, and root cause analysis on Windows and Linux endpoints, mapping findings to MITRE ATT&CK tactics and documenting detailed incident response reports.</li>
+                    <li>Conducted log correlation, malware triage, and root cause analysis on Windows and Linux endpoints, mapping findings to MITRE ATT&CK tactics (T1110, T1566, T1059).</li>
+                    <li>Performed threat hunting on endpoint telemetry (Sysmon, EDR) to surface lateral movement and persistence TTPs.</li>
                 </ul>
                 <div style="margin-top: 8px; font-size: 13px;">
                     <a href="https://drive.google.com/file/d/1Ju5kK8asAPZBCAtCh-dfvDiqroBl7gwE/view?usp=sharing" target="_blank" style="margin-right: 15px; color: var(--primary); text-decoration: none;">📄 Offer Letter</a>
                     <a href="https://drive.google.com/file/d/1Zs8vwtH_0YvkDbXPYDyaziEHXDaffjoI/view?usp=sharing" target="_blank" style="color: var(--primary); text-decoration: none;">🏆 Completion Certificate</a>
                 </div>
+            </div>
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">Independent Security Researcher</span>
+                    <span class="item-date">Jan 2025 – Aug 2025</span>
+                </div>
+                <div class="item-org">Bug Bounty Programs</div>
+                <ul>
+                    <li>Disclosed 50+ vulnerabilities across web targets — IDOR, SSRF, XSS, SSTI, broken access control, and business-logic flaws.</li>
+                    <li>Collaborated with vendor security teams for responsible disclosure and verified remediation steps.</li>
+                    <li>Built custom reconnaissance and exploitation scripts in Python to automate repetitive testing tasks.</li>
+                    <li>Translated offensive findings into Wazuh rules and Splunk searches to improve SOC detection coverage.</li>
+                </ul>
             </div>
         </section>
 
@@ -298,17 +319,36 @@
             <h2>Featured Projects</h2>
             <div class="project-item">
                 <div class="item-header">
-                    <span class="item-title">SOC Platform & Agent Ecosystem</span>
+                    <span class="item-title">HoneyLearn — AI-Powered Honeypot Platform</span>
+                    <span class="item-date">Python, FastAPI, Scikit-Learn, Docker</span>
+                </div>
+                <ul>
+                    <li>Engineered a production-grade honeypot platform using FastAPI with real-time MITRE ATT&CK mapping.</li>
+                    <li>Implemented ML-based attack classification (TF-IDF + LinearSVC, Isolation Forest) and honeytoken traps.</li>
+                    <li>Built session tracking and threat intel export in JSON/CSV/STIX formats.</li>
+                </ul>
+                <div style="margin-top: 4px; font-size: 12px;"><a href="https://github.com/Vaibhav300503/HoneyLearn" target="_blank" style="color: var(--primary); text-decoration: none;">🔗 GitHub</a></div>
+            </div>
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Enterprise SOC Platform & Agent</span>
                     <span class="item-date">Python, FastAPI, Redis, MongoDB</span>
                 </div>
                 <ul>
-                    <li>Designed an enterprise-grade log collection ecosystem with native support for Windows Event Logs
-                        and Linux Syslogs.</li>
-                    <li>Implemented **File Integrity Monitoring (FIM)** with Canary File support to detect early-stage
-                        ransomware activity.</li>
-                    <li>Integrated process attribution for network connections, providing granular visibility into
-                        endpoint activity.</li>
+                    <li>Enterprise-grade log collection ecosystem with FIM, Canary File ransomware detection, and MITRE ATT&CK auto-classification.</li>
+                    <li>Reduced detection time from minutes to seconds with process attribution engine.</li>
                 </ul>
+                <div style="margin-top: 4px; font-size: 12px;"><a href="https://github.com/Vaibhav300503/Agent" target="_blank" style="color: var(--primary); text-decoration: none;">🔗 GitHub</a></div>
+            </div>
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Multi-Threaded Network Scanner</span>
+                    <span class="item-date">Python, Scapy, Threading, Socket</span>
+                </div>
+                <ul>
+                    <li>Multi-threaded recon tool with ARP host discovery, stealth TCP SYN scanning, banner grabbing, and OS fingerprinting.</li>
+                </ul>
+                <div style="margin-top: 4px; font-size: 12px;"><a href="https://github.com/Vaibhav300503/Custom_Network_Scanner" target="_blank" style="color: var(--primary); text-decoration: none;">🔗 GitHub</a></div>
             </div>
             <div class="project-item">
                 <div class="item-header">
@@ -316,42 +356,45 @@
                     <span class="item-date">React, Node.js, YOLO, Socket.IO</span>
                 </div>
                 <ul>
-                    <li>Developed an AI-powered risk prediction system using YOLO models for real-time crowd density
-                        detection.</li>
-                    <li>Built a Digital Twin engine to visualize crowd dynamics and trigger proactive security alerts
-                        before critical density levels.</li>
+                    <li>AI-powered crowd risk prediction using YOLO models with a Digital Twin engine for proactive alerts.</li>
+                    <li>Award-winning project at SunHacks 2025, Sandip University, Nashik.</li>
                 </ul>
+                <div style="margin-top: 4px; font-size: 12px;"><a href="https://github.com/Vaibhav300503/Crowd_Management_Digital_Twin" target="_blank" style="color: var(--primary); text-decoration: none;">🔗 GitHub</a></div>
             </div>
             <div class="project-item">
                 <div class="item-header">
-                    <span class="item-title">Custom Network Scanner</span>
-                    <span class="item-date">Python, Scapy, Socket</span>
+                    <span class="item-title">SOC Visualization Dashboard</span>
+                    <span class="item-date">Vue.js, Chart.js, Tailwind CSS, Vite</span>
                 </div>
                 <ul>
-                    <li>Built a multi-threaded network reconnaissance tool leveraging Scapy for stealthy TCP SYN
-                        scanning and ARP host discovery.</li>
-                    <li>Implemented service version detection and OS fingerprinting via TTL analysis to identify
-                        potential network vulnerabilities.</li>
+                    <li>Centralized SOC monitoring interface with real-time SIEM data visualization and drill-down alert analysis.</li>
                 </ul>
-            </div>
-            <div class="project-item">
-                <div class="item-header">
-                    <span class="item-title">HoneyLearn Defensive Honeypot</span>
-                    <span class="item-date">Python, FastAPI, Scikit-Learn</span>
-                </div>
-                <ul>
-                    <li>Engineered a standalone Python FastAPI application that acts as a honeypot to track suspicious behaviors and attackers.</li>
-                    <li>Integrated an AI module (Scikit-Learn Isolation Forest) to dynamically score and actively defend against malicious traffic.</li>
-                </ul>
+                <div style="margin-top: 4px; font-size: 12px;"><a href="https://github.com/Vaibhav300503/SOC-DASHBOARD" target="_blank" style="color: var(--primary); text-decoration: none;">🔗 GitHub</a></div>
             </div>
         </section>
 
         <section>
             <h2>Certifications</h2>
             <div class="cert-list">
-                <div class="cert-item">IBM Cybersecurity Analyst Professional Certificate</div>
-                <div class="cert-item">Ethical Hacking Training (CEH Path)</div>
-                <div class="cert-item">TATA Cybersecurity Analyst Simulation (Forage)</div>
+                <div class="cert-item">IBM Cybersecurity Professional Analyst <br><small>IBM / Coursera</small></div>
+                <div class="cert-item">Cybersecurity with AI <br><small>Internshala</small> · <a href="https://drive.google.com/file/d/1xDHBA6OjEDv9I2cjWOOfp9BBjwHR7amP/view?usp=sharing" target="_blank">View</a></div>
+                <div class="cert-item">Certified Ethical Hacker <br><small>NSDC</small> · <a href="https://drive.google.com/file/d/1eS8kFzD5-jCKF4Vz_HbNUMO7AmohWAZo/view?usp=sharing" target="_blank">View</a></div>
+                <div class="cert-item">Mastering Network Security: Defend Against Cyber Attacks <br><small>Udemy</small> · <a href="https://drive.google.com/file/d/1mQjF__C3nqQiozFLW5jRQPJ7xCtSxToV/view?usp=sharing" target="_blank">View</a></div>
+                <div class="cert-item">Defensive Cyber Operations: The Blue Team &amp; Network Security <br><small>Udemy</small> · <a href="https://drive.google.com/file/d/1JHSNEsYhk_F9mFMVOLDfT8RZgzmLGe5s/view?usp=sharing" target="_blank">View</a></div>
+                <div class="cert-item">Red Team Mastery: Advanced Offensive Security <br><small>Udemy</small> · <a href="https://drive.google.com/file/d/1l84P475gEXRWOWCB1jXW1xeW7bL5KQDu/view?usp=sharing" target="_blank">View</a></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Achievements & Hackathons</h2>
+            <div class="achievement-list">
+                <div class="achievement-item">🏆 SunHacks 2025 — Award Recipient <br><small>Sandip University, Nashik</small> · <a href="https://drive.google.com/file/d/1qZLbmIr-TRpgHJzB4McWaH_9CXR-mc2q/view?usp=sharing" target="_blank">Certificate</a></div>
+                <div class="achievement-item">🏆 Spardha 25 — Winner <br><small>VAMNICOM, Pune</small> · <a href="https://drive.google.com/file/d/1umstccYdPQ7kPsj1UsFsg9xM_2-X3fXs/view?usp=sharing" target="_blank">Certificate</a></div>
+                <div class="achievement-item">🐛 50+ Bug Bounty Findings <br><small>XSS, SSRF, IDOR, broken access control</small></div>
+                <div class="achievement-item">🎯 TryHackMe — Top 7% <br><small>Level 8 [HACKER] · 7,266+ pts</small> · <a href="https://tryhackme.com/p/vaibhavdeepsingh" target="_blank">Profile</a></div>
+                <div class="achievement-item">HackChrono 2025 — Selected <br><small>Chandigarh University</small> · <a href="https://drive.google.com/file/d/17VlmtSl2n_yh7OzjUfNFaQxVsF7oRGFC/view?usp=sharing" target="_blank">Certificate</a></div>
+                <div class="achievement-item">Hackatron 2025 — Selected <br><small>ABV-IIITM, Gwalior</small> · <a href="https://drive.google.com/file/d/12xJnm8LiRf4AGonemKOxoQeiydpC2Aro/view?usp=sharing" target="_blank">Certificate</a></div>
+                <div class="achievement-item">Xcelerate 3.0 — Selected <br><small>Shiv Nadar University</small> · <a href="https://drive.google.com/file/d/1QzXDi81EtvuWzvvvxznuD9-0ZhPF0UYL/view?usp=sharing" target="_blank">Certificate</a></div>
             </div>
         </section>
 
@@ -360,9 +403,12 @@
             <div class="experience-item">
                 <div class="item-header">
                     <span class="item-title">B.Sc. in Computer Science</span>
-                    <span class="item-date">Completed May 2025</span>
+                    <span class="item-date">Graduated May 2025</span>
                 </div>
-                <div class="item-org">Sage University, Indore • CGPA: 8.0</div>
+                <div class="item-org">Sage University, Indore • CGPA: 8.0/10.0</div>
+            </div>
+            <div class="experience-item" style="margin-top: 4px;">
+                <span class="item-title">Ethical Hacking Training</span> — <span class="item-org">Internshala (In-depth offensive security training)</span>
             </div>
         </section>
     </div>

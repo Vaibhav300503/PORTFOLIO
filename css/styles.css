@@ -1390,56 +1390,215 @@ h1, h2, h3, h4, h5 {
     margin-top: 4px;
 }
 
-/* Achievement photo panel */
-.achievement-photo-panel {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
+.achievement-cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted-dim);
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.achievement-cert-link:hover {
+    border-color: var(--primary);
+    color: var(--primary-glow);
+    background: rgba(168, 85, 247, 0.08);
+}
+
+/* ============ TRYHACKME STATS PANEL ============ */
+.thm-panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-glow);
+    letter-spacing: 0.02em;
+}
+
+.thm-panel-heading svg {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+.thm-stats-panel-wrap {
     opacity: 0;
     transform: scale(0.95);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.achievement-photo-panel.visible {
+.thm-stats-panel-wrap.visible {
     opacity: 1;
     transform: scale(1);
 }
 
-.achievement-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.thm-stats-panel {
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
 }
 
-.achievement-photo-overlay {
+.thm-panel-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.thm-badge-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.thm-badge-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.thm-badge-link:hover .thm-badge-img {
+    transform: scale(1.03);
+}
+
+.thm-badge-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(26, 16, 37, 0.9) 0%, rgba(26, 16, 37, 0.2) 40%, transparent 100%);
-    pointer-events: none;
+    background: rgba(26, 16, 37, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: var(--primary-glow);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
 }
 
-.achievement-photo-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
+.thm-badge-overlay svg {
+    width: 16px;
+    height: 16px;
 }
 
-.achievement-photo-caption .eyebrow {
+.thm-badge-link:hover .thm-badge-overlay {
+    opacity: 1;
+}
+
+.thm-info {
+    padding: 16px 18px 18px;
+}
+
+.thm-header-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.thm-username {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.thm-rank-badge {
     font-family: var(--font-mono);
     font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--primary);
+    letter-spacing: 0.15em;
+    color: var(--primary-glow);
+    margin-top: 2px;
 }
 
-.achievement-photo-caption .name {
+.thm-percentile {
     font-family: var(--font-display);
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    margin-top: 4px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+}
+
+.thm-stats-tiles {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.thm-stat-tile {
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    background: rgba(168, 85, 247, 0.05);
+    padding: 8px 4px;
+}
+
+.thm-stat-value {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.thm-stat-label {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+.thm-badges-section {
+    border-top: 1px solid rgba(168, 85, 247, 0.15);
+    padding-top: 12px;
+}
+
+.thm-badges-title {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.thm-badges-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.thm-badge-tag {
+    border-radius: 6px;
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    background: rgba(168, 85, 247, 0.08);
+    padding: 3px 8px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.thm-badge-tag:hover {
+    border-color: var(--primary);
+    color: var(--primary-glow);
 }
 
 /* ============ CERTIFICATIONS ============ */
@@ -1462,6 +1621,15 @@ h1, h2, h3, h4, h5 {
 .cert-card.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.cert-card-clickable {
+    cursor: pointer;
+}
+
+.cert-card-clickable:hover {
+    border-color: var(--primary) !important;
+    box-shadow: var(--shadow-elevated), 0 0 30px rgba(168, 85, 247, 0.4) !important;
 }
 
 .cert-card-glow {
@@ -1501,6 +1669,32 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
     margin-top: 4px;
     line-height: 1.4;
+}
+
+.cert-view-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted-dim);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.cert-view-hint svg {
+    width: 12px;
+    height: 12px;
+}
+
+.cert-card-clickable:hover .cert-view-hint {
+    opacity: 1;
+    transform: translateY(0);
+    color: var(--primary-glow);
 }
 
 /* ============ CONTACT ============ */
@@ -1663,6 +1857,12 @@ h1, h2, h3, h4, h5 {
     .contact-inner {
         grid-template-columns: 1fr;
     }
+    .certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .thm-stats-tiles {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1701,6 +1901,9 @@ h1, h2, h3, h4, h5 {
     }
     .education-grid {
         grid-template-columns: 1fr;
+    }
+    .thm-stats-tiles {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
