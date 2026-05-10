@@ -35,11 +35,6 @@ portfolio/
 └── .gitignore
 ```
 
-##  Deployment (GitHub Pages)
-1. Push all files to a GitHub repo named `portfolio`.
-2. Go to **Settings** > **Pages** > select `main` branch > **Save**.
-3. Site goes live at `https://Vaibhav300503.github.io/portfolio/`.
-
 ##  Links
 - **GitHub**: [github.com/Vaibhav300503](https://github.com/Vaibhav300503)
 - **LinkedIn**: [linkedin.com/in/vaibhav-deep-singh-2047a2302](https://www.linkedin.com/in/vaibhav-deep-singh-2047a2302)
