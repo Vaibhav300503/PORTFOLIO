@@ -99,7 +99,7 @@ const achievements = [
     { title: 'SunHacks 2025 — Award Recipient', description: 'Recognized for building an AI-powered Crowd Management Digital Twin at the international-level SunHacks hackathon, Sandip University, Nashik.', certLink: 'https://drive.google.com/file/d/1qZLbmIr-TRpgHJzB4McWaH_9CXR-mc2q/view?usp=sharing' },
     { title: 'Spardha 25 by VAMNICOM, Pune — Winner', description: 'Award winner at Spardha 25, organized by Vaikunth Mehta National Institute of Cooperative Management (VAMNICOM), Pune.', certLink: 'https://drive.google.com/file/d/1umstccYdPQ7kPsj1UsFsg9xM_2-X3fXs/view?usp=sharing' },
     { title: '50+ Bug Bounty Findings', description: 'Validated vulnerabilities responsibly disclosed across the industry — including XSS, SSRF, IDOR, and broken access control.' },
-    { title: 'TryHackMe — Top 7%', description: 'Level 8 [HACKER] · 56 rooms completed · 12 badges · 7,266+ points. Top 7% globally.' },
+    { title: 'TryHackMe — Top 2% Globally', description: 'Level 10 [WIZARD] · 97 rooms completed · 15 badges · 68,519 points. Top 2% globally on TryHackMe.' },
     { title: 'HackChrono 2025 — Selected', description: 'Selected competitor at Chandigarh University hackathon.', certLink: 'https://drive.google.com/file/d/17VlmtSl2n_yh7OzjUfNFaQxVsF7oRGFC/view?usp=sharing' },
     { title: 'Hackatron 2025 — Selected', description: 'Selected at ABV-IIITM, Gwalior national-level hackathon.', certLink: 'https://drive.google.com/file/d/12xJnm8LiRf4AGonemKOxoQeiydpC2Aro/view?usp=sharing' },
     { title: 'Xcelerate 3.0 — Selected', description: 'Selected at Shiv Nadar University, Greater Noida hackathon.', certLink: 'https://drive.google.com/file/d/1QzXDi81EtvuWzvvvxznuD9-0ZhPF0UYL/view?usp=sharing' },
@@ -434,19 +434,19 @@ function renderTryHackMePanel() {
 
     const thmData = {
         username: 'vaibhavdeepsingh',
-        rank: 'HACKER',
-        level: 8,
-        percentile: 'Top 7%',
-        points: '7,266',
-        rooms: 56,
-        badges: 12,
-        streak: 13,
+        rank: 'WIZARD',
+        level: 10,
+        percentile: 'Top 2%',
+        points: '68,519',
+        rooms: 97,
+        badges: 15,
+        streak: 24,
         profileUrl: 'https://tryhackme.com/p/vaibhavdeepsingh',
         badgesList: [
             'cat linux.txt', 'First Four', 'Blue', 'OhSINT',
             'Networking Nerd', 'World Wide Web', 'Webbed',
             'Pentesting Principles', 'Burped', 'Hash Cracker',
-            '7 Day Streak', 'Bronze League Winner'
+            '7 Day Streak', 'Bronze League Winner', 'Silver League', 'Gold League', '30 Day Streak'
         ]
     };
 
@@ -467,7 +467,7 @@ function renderTryHackMePanel() {
                 <div class="thm-header-row">
                     <div>
                         <div class="thm-username">${thmData.username}</div>
-                        <div class="thm-rank-badge">[${thmData.rank}] · Level ${thmData.level} [0x${thmData.level}]</div>
+                        <div class="thm-rank-badge">[${thmData.rank}] · Level ${thmData.level} [0xA]</div>
                     </div>
                     <div class="thm-percentile">${thmData.percentile}</div>
                 </div>
